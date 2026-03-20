@@ -13,7 +13,7 @@ TabMind CLI is a Python-based command-line tool that helps you:
 * Set deadlines for tasks
 * Get AI-powered reminders using GitHub Copilot
 
-👉 Main Project: https://github.com/IshikaBanga26/TabMind
+👉 Main Project: https://github.com/IshikaBanga26/TabMind-CLI
 
 ---
 
@@ -76,7 +76,7 @@ tabmind --help
 
 ## Links
 
-* GitHub Repo: https://github.com/IshikaBanga26/TabMind
+* GitHub Repo: https://github.com/IshikaBanga26/TabMind-CLI
 * PyPI Package: https://pypi.org/project/tabmind/
 
 ---
