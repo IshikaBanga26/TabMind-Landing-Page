@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TabMind CLI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-black text-white font-mono">
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6">
+    <h1 class="text-8xl font-bold mb-6">
+      TabMind CLI
+    </h1>
+
+    <p class="text-gray-400 text-xl mb-12">
+      Stop hoarding tabs. Start finishing tasks.
+    </p>
+
+    <a href="https://github.com/IshikaBanga26/TabMind-CLI"
+       class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+       View on GitHub
+    </a>
+
+    <div class="mt-24 flex justify-center">
+      <div class="flex items-center gap-4 bg-[#111] border border-white rounded-xl px-6 py-4 shadow-lg">
+
+        <code id="installCmd" class="text-white text-lg">
+          pip install tabmind
+        </code>
+
+        <!-- Copy button -->
+        <button onclick="copyCmd(this, 'installCmd')"
+        class="text-gray-400 hover:text-white transition duration-200">
+
+          <!-- Copy Icon -->
+          <i data-lucide="copy" class="copy-icon w-5 h-5"></i>
+
+          <!-- Check Icon -->
+          <i data-lucide="check" class="check-icon w-5 h-5 hidden text-white"></i>
+
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-10 text-center">Features</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="border border-gray-700 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Save Tabs with Purpose</h3>
+        <p class="text-gray-400">
+          Store URLs along with the reason you saved them.
+        </p>
+      </div>
+
+      <div class="border border-gray-700 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Track when Added</h3>
+        <p class="text-gray-400">
+          Automatically logs the date and time.
+        </p>
+      </div>
+
+      <div class="border border-gray-700 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">AI-Powered Reminders</h3>
+        <p class="text-gray-400">
+          Generates smart prompts using GitHub Copilot CLI.
+        </p>
+      </div>
+
+      <div class="border border-gray-700 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Pure CLI Experience</h3>
+        <p class="text-gray-400">
+          Built for developers who live in the terminal.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="py-16 px-6 bg-gray-900">
+
+    <h2 class="text-3xl font-bold text-center mb-12">
+      See TabMind in Action
+    </h2>
+
+    <div class="flex justify-center">
+      
+      <div class="rounded-xl overflow-hidden border border-gray-700 shadow-2xl max-w-6xl">
+        
+        <img src="demo.png"
+            alt="TabMind CLI Demo"
+            class="w-full object-cover">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-500">
+    Built for the GitHub Copilot CLI Challenge
+  </footer>
+
+  <!-- Copy Script -->
+  <script>
+    function copyCmd(button, id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text);
+
+      const copyIcon = button.querySelector(".copy-icon");
+      const checkIcon = button.querySelector(".check-icon");
+
+      copyIcon.classList.add("hidden");
+      checkIcon.classList.remove("hidden");
+
+      setTimeout(() => {
+        copyIcon.classList.remove("hidden");
+        checkIcon.classList.add("hidden");
+      }, 2000);
+    }
+    lucide.createIcons();
+
+  </script>
+
+</body>
+</html>
